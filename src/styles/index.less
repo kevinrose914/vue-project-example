@@ -1,0 +1,77 @@
+@import './reset.less';
+@import './media.less';
+@import './iconfont.less';
+
+.inline {
+  display: inline-block;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.bold {
+  font-weight: bold;
+}
+.pointer {
+  cursor: pointer;
+}
+.disabled {
+  cursor: not-allowed;
+}
+.center {
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
+.transition {
+  transition: all .5s;
+}
+.middle {
+  vertical-align: middle;
+}
+/*子元素在父元素中垂直居中*/
+.inline-middle {
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 清除浮动
+.clear {
+  zoom: 1;
+  &:after {
+    display: block;
+    clear: both;
+    content: '\0020';
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.warn {
+  color: @color-warn;
+}
+.regular {
+  color: @color-regular;
+}
+
+.link {
+  color: #0096f5;
+  &:hover {
+    text-decoration: underline;
+  }
+}
