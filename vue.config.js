@@ -14,6 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 const commonPlugin = [
   new webpack.DefinePlugin({
     __PROD__: buildType === 'prod',
+    __API_HOST__: 'xxx'
   }),
 ];
 if (buildType === 'dev') {
